@@ -1,0 +1,135 @@
+body {
+    background-image: url(../imgs/banner-login.png);
+    background-size: cover;
+}
+
+/* CABEÇALHO*/
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.cabecalho {
+    background-color: var(--azul-escuro);
+
+    /* Por padrão o flex vem na direção row/linha */
+    display: flex;
+
+    /* Alinha no sentido do flex */
+    justify-content: space-between;
+
+    /* Alinha no sentido contrário do flex */
+    align-items: center;
+
+    padding: 0 120px;
+
+    /* 10% da visualização vertical do dispositivo/navegador */
+    height: 10vh;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+
+    /* 1rem -> equivalente a 16px (padrão da raíz do HTML) */
+    /* em -> pega o tamanho da tipografia do elemento pai */
+    font-size: 1em;
+    font-weight: 500;
+}
+
+main{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;   
+    height: 90vh;
+}
+
+.login {
+    background-color: #E9F0EF;
+
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 50px;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 725px;
+    height: 750px;
+    
+    border-radius: 15px;
+}
+
+.e-mail {
+    margin-bottom: 10px;
+}
+
+.e-mail,
+.senha {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 5px;
+}
+
+.e-mail input,
+.senha input {
+    width: 500px;
+    height: 50px;
+    padding: 20px;
+    font-size: 18px;
+
+    border-radius: 10px;
+}
+
+.senha input {
+    background-image: url(../imgs/mdi-light_eye.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1.3em;
+
+    margin-bottom: 60px;
+
+    padding-bottom: 10px;
+}   
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 30px;
+
+   
+}
+
+.entrar,
+.google {
+    border-radius: 10px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.entrar {
+    background-color: #26333D;
+    text-transform: uppercase;
+
+   
+}
+
+.google {
+    background-color: #ffffff;
+    color: #26333D;
+
+    display: flex;
+    gap: 10px;
+}
+
+.google img {
+    width: -50%;
+}
