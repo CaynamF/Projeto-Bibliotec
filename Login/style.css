@@ -59,7 +59,7 @@ main{
     width: 725px;
     height: 750px;
     
-    border-radius: 15px;
+    border-radius: 30px;
 }
 
 .e-mail {
@@ -87,7 +87,7 @@ main{
 .senha input {
     background-image: url(../imgs/mdi-light_eye.svg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 460px;
     background-size: 1.3em;
 
     margin-bottom: 60px;
