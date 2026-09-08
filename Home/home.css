@@ -1,45 +1,8 @@
-/* CABEÇALHO*/
 
-a {
-    color: var(--branco);
-    text-decoration: none;
-}
 
-.cabecalho {
-    background-color: var(--azul-escuro);
-
-    /* Por padrão o flex vem na direção row/linha */
-    display: flex;
-
-    /* Alinha no sentido do flex */
-    justify-content: space-between;
-
-    /* Alinha no sentido contrário do flex */
-    align-items: center;
-
-    padding: 0 120px;
-
-    /* 10% da visualização vertical do dispositivo/navegador */
-    height: 10vh;
-}
-
-.navegacao {
-    display: flex;
-    align-items: center;
-
-    gap: 50px;
-}
-
-.navegacao a {
-    text-transform: uppercase;
-
-    /* 1rem -> equivalente a 16px (padrão da raíz do HTML) */
-    /* em -> pega o tamanho da tipografia do elemento pai */
-    font-size: 1em;
-    font-weight: 500;
-}
 
 /* CONTEÚDO PRINCIPAL */
+
 /* Primeiro banner */
 
 .banner-principal {
@@ -49,6 +12,10 @@ a {
 
     background-image: url(../imgs/banner-principal-home.png);
     background-size: cover;
+
+    /* background-repeat: no-repeat; */
+
+    /* overflow: hidden; evita que os elementos transbordem */
 
     display: flex;
     align-items: center;
@@ -65,7 +32,6 @@ a {
 
     align-items: flex-start;
     justify-content: center;
-
     gap: 50px;
 }
 
@@ -89,7 +55,7 @@ a {
 }
 
 .botao:hover {
-    background-color: #2AB2AB;
+    background-color: #2ab2ab;
     color: var(--branco);
 }
 
@@ -104,8 +70,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin-top: 50px;
 }
 
 .titulo-secao h2 {
@@ -114,6 +78,7 @@ a {
 }
 
 .titulo-secao span {
+    display: flex;
     width: 250px;
     height: 4px;
     background-color: var(--cor-destaque);
@@ -150,16 +115,16 @@ a {
     align-items: center;
     justify-content: center;
 
-    padding: 80px 20px 50px; /* em cima -> direita e esquerda -> em baixo */
+    padding: 80px 20px 50px; /* em cima -> direita e esquerda -> embaixo */
 
     border: 1px solid var(--azul-escuro);
     border-radius: 30px;
-    box-shadow: 5px 5px 30 rgba(0, 0, 0, 0.25); /* x -> y -> blur(desfoque) -> cor com transparência */
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25); /* x -> y -> blur(desfoque) -> cor com transparência */
 
     text-align: center;
 
-    /* Criar refer~encia de posicionamanto para o ícone, quando o ícone for posicionado usa esse card como refência  */
-    /* Sem isso, o círculo poderia usar outro elemento da página como referência e sair passenando pelo layout. */
+    /* Cria referência de posicionamento para o ícone, quando o ícone for posicionado, usa esse card como referência */
+    /* sem isso, o círculo poderia usar outro elemento da página como referência e sair passeando pelo layout. */
     position: relative;
 }
 
@@ -182,15 +147,16 @@ a {
     /* Move o elemento pra cima, o valor negativo faz ele sair parcialmente do card */
     top: -15%;
 
-    /* Coloca o elemento em 50% da largra do card */
+    /* Coloca o começo elemento em 50% da largura do card */
     left: 50%;
 
-    /* Ajustamos o posicionament do elemento, mas a vorda esquerda do círculo fica no centro, não o círculo inteiro */
+    /* ajustamos o posicionamento do elemento, mas a borda esquerda do círculo fica no centro, não o círculo inteiro */
     transform: translateX(-50%);
 
     display: grid;
 
-    /* É a mesma coisa que colocar align-items: center; e justify-items: center; */
+    /* place-items: center; é a mesma coisa que colocar:
+        align-items: center; e justify-items: center; */
     place-items: center;
 }
 
@@ -221,24 +187,22 @@ a {
     color: var(--branco);
 }
 
-.livros {
+/* ACERVO */
+
+.acervo {
     display: flex;
     flex-direction: column;
-
-    align-items: center;
     justify-content: space-between;
 
     gap: 100px;
+    padding: 50px 120px;
 }
 
-.livros-lista {
+.livros {
     display: grid;
-
-    grid-template-columns: repeat(4, 20%);
-
-    gap: 10%;
-
+    grid-template-columns: repeat(4, auto);
     justify-content: center;
+    gap: 5%;
 }
 
 .livro {
@@ -246,79 +210,22 @@ a {
     flex-direction: column;
 
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 
-    gap: 10px;
+    text-align: center;
 }
 
 .livro img {
-    width: 200px;
     height: 300px;
-
-    object-fit: cover;
 }
 
 .livro h3 {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    text-align: center;
     text-transform: uppercase;
-    width: 90%;
-    height: 30px;
-}
-
-.livro p {
     font-size: 1em;
-    text-align: center;
-    width: 80%;
+    width: 65%;
 }
 
-/* Footer*/
-
-footer {
-    background-color: var(--azul-escuro);
-    color: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 100px 120px;
-
-    margin-top: 100px;
+.livro-texto {
+    font-size: 0.8em;
 }
-
-footer h4 {
-    color: var(--cor-destaque);
-}
-
-.secao-biblioteca {
-    display: flex;
-    justify-content: space-between;
-}
-
-.secao-info {
-    display: flex;
-    gap: 140px;
-}
-
-.secao-redes-sociais {
-    display: flex;
-    justify-content: space-between;
-    margin: 65px 0px;
-}
-
-.info-redes {
-    display: flex;
-    gap: 140px;
-    align-items: center;
-}
-
-.secao-legal {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 0px;
-}
-
-.informacoes {
-    display: flex;
-    gap: 50px;
-} 
