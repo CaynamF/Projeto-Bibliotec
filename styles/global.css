@@ -15,6 +15,8 @@
     --fundos: #E9F0EF;
     --textos-paginas: #535353;
     --cor-bordas: #CCCCCC;
+    --aguardando-retirada: #D34A00;
+    --retirado: #00A223;
 }
 
 html {
